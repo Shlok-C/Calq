@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/Users/shlok/.claude/skills/**)",
+      "Bash(mkdir -p /home/shlok/.claude/skills)",
+      "Bash(cp -r /mnt/c/Users/shlok/.claude/skills/. /home/shlok/.claude/skills/)",
+      "Read(//home/shlok/.claude/**)",
+      "Bash(gh repo *)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(uv --version)",
+      "Bash(pip --version)",
+      "Bash(uv init *)",
+      "Bash(uv add *)",
+      "Bash(uv run *)",
+      "Bash(curl -sS -o /tmp/calq-index.html -w \"GET / -> %{http_code}\\\\n\" http://127.0.0.1:8765/)",
+      "Read(//tmp/**)",
+      "Bash(curl -sS -X POST http://127.0.0.1:8765/simulate -H 'content-type: application/json' -d '{\"num_wires\":2,\"num_cols\":2,\"columns\":[[{\"wire\":0,\"gate\":\"H\"}],[{\"wire\":0,\"gate\":\"CTRL\"},{\"wire\":1,\"gate\":\"X\"}]]}' -w \"\\\\nPOST /simulate -> %{http_code}\\\\n\")",
+      "Bash(netstat -ltn)",
+      "Bash(kill 73810)"
+    ]
+  }
+}
